@@ -1,0 +1,527 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Шапка */
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #007bff;
+}
+
+.contact-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Баннер */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Услуги */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.service-item h3 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.service-item ul {
+    list-style: none;
+    text-align: left;
+}
+
+.service-item ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.service-item ul li:before {
+    content: "✓";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+}
+
+/* Портфолио */
+.portfolio {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all 0.3s ease; /* Анимация для плавного изменения */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Тень для изображений */
+
+
+}
+/* Эффект зума при наведении */
+.gallery img:hover {
+    transform: scale(1.05); /* Увеличиваем изображение на 5% */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Усиливаем тень */
+}
+
+
+
+
+/* О нас */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    margin: 20px;
+}
+
+.stat-item span {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Контакты */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer-menu ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-menu li a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+    color: #007bff;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-btn:hover {
+    background-color: #0056b3;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .banner {
+        height: 400px;
+    }
+    
+    .content h1 {
+        font-size: 32px;
+    }
+    
+    .content p {
+        font-size: 16px;
+    }
+    
+    .stats {
+        flex-direction: column;
+    }
+}
+
+/* Анимации появления */
+
+/* Начальное состояние для всех анимируемых элементов */
+.animate-from-top,
+.animate-from-left,
+.animate-from-right,
+.animate-from-bottom {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+/* Анимации из разных сторон */
+.animate-from-top {
+    transform: translateY(-50px);
+}
+
+.animate-from-left {
+    transform: translateX(-50px);
+}
+
+.animate-from-right {
+    transform: translateX(50px);
+}
+
+.animate-from-bottom {
+    transform: translateY(50px);
+}
+
+/* Задержки для последовательного появления */
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+    transition-delay: 0.4s;
+}
+
+.delay-3 {
+    transition-delay: 0.6s;
+}
+
+/* Класс для активного состояния */
+.animate-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+/* Секция "О нас" с улучшенным стилем */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about-content {
+    position: relative;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.stat-item span {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Адаптивность для статистики */
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-item {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .about h2 {
+        font-size: 28px;
+    }
+    
+    .about p {
+        font-size: 16px;
+    }
+}
+
